@@ -65,7 +65,7 @@ const blogPosts = [
 const Blog = () => {
   const theme = useTheme();
 
-  const formatDate = (dateString) => {
+  const formatDate = (dateString: string | number | Date) => {
     return new Date(dateString).toLocaleDateString("en-US", {
       year: "numeric",
       month: "long",
@@ -86,7 +86,7 @@ const Blog = () => {
 
       <Grid container spacing={3} sx={{ mb: 4 }}>
         {blogPosts.map((post) => (
-          <Grid key={post.id} xs={12} sm={6} md={4}>
+          <Grid key={post.id}>
             <Card
               sx={{
                 height: "100%",

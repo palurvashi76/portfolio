@@ -13,8 +13,29 @@ import { FilterList } from "@mui/icons-material";
 import Project from "./Project";
 import { useMemo, useState } from "react";
 
+// ----- Types -----
+interface ProjectData {
+  id: string;
+  title: string;
+  description: string;
+  type: string;
+  domain: string;
+  technologies: string[];
+  images: string[];
+  codeLink: string;
+  projectLink?: string;
+}
+
+interface Filters {
+  type: string[];
+  domain: string[];
+  technology: string[];
+}
+
+type FilterType = keyof Filters;
+
 // ----- Mock Data -----
-const projects = [
+const projects: ProjectData[] = [
   {
     id: "1",
     title: "E-Commerce Platform",
@@ -53,7 +74,7 @@ const projects = [
   },
   {
     id: "4",
-    title: "Mobile Fitneasas ss App",
+    title: "Mobile Fitness App",
     description:
       "Cross-platform mobile application for fitness tracking with workout plans and progress monitoring.",
     type: "Personal",
@@ -67,20 +88,28 @@ const projects = [
 ];
 
 // ----- Portfolio Component -----
-const Portfolio = () => {
+const Portfolio: React.FC = () => {
   const theme = useTheme();
 
-  const [filters, setFilters] = useState({
+  const [filters, setFilters] = useState<Filters>({
     type: [],
     domain: [],
     technology: [],
   });
 
-  const allTypes = ["Course", "Personal"];
-  const allDomains = ["FS", "DBMS", "Networking", "App", "Audio Visualizer"];
-  const allTechnologies = [...new Set(projects.flatMap((p) => p.technologies))];
+  const allTypes: string[] = ["Course", "Personal"];
+  const allDomains: string[] = [
+    "FS",
+    "DBMS",
+    "Networking",
+    "App",
+    "Audio Visualizer",
+  ];
+  const allTechnologies: string[] = [
+    ...new Set(projects.flatMap((p) => p.technologies)),
+  ];
 
-  const handleFilterChange = (filterType, value) => {
+  const handleFilterChange = (filterType: FilterType, value: string): void => {
     setFilters((prev) => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
@@ -103,10 +132,13 @@ const Portfolio = () => {
     });
   }, [filters]);
 
-  const clearAllFilters = () =>
+  const clearAllFilters = (): void =>
     setFilters({ type: [], domain: [], technology: [] });
-  const hasActiveFilters =
-    filters.type.length || filters.domain.length || filters.technology.length;
+
+  const hasActiveFilters: boolean =
+    filters.type.length > 0 ||
+    filters.domain.length > 0 ||
+    filters.technology.length > 0;
 
   return (
     <Box sx={{ maxWidth: "1400px", mx: "auto", px: { xs: 2, md: 4 }, py: 4 }}>
@@ -147,7 +179,7 @@ const Portfolio = () => {
             <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
               <FilterList sx={{ mr: 1.5, color: theme.palette.primary.main }} />
               <Typography variant="h6" fontWeight="bold">
-                Filterssss
+                Filters
               </Typography>
             </Box>
 

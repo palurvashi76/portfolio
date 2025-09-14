@@ -17,11 +17,29 @@ import {
   DarkMode,
   LightMode,
 } from "@mui/icons-material";
+import type { SvgIconComponent } from "@mui/icons-material";
 
-const Navbar = ({ currentPage, onPageChange, darkMode, toggleDarkMode }) => {
+interface NavItem {
+  name: string;
+  icon: SvgIconComponent;
+}
+
+interface NavbarProps {
+  currentPage: string;
+  onPageChange: (page: string) => void;
+  darkMode: boolean;
+  toggleDarkMode: () => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({
+  currentPage,
+  onPageChange,
+  darkMode,
+  toggleDarkMode,
+}) => {
   const theme = useTheme();
 
-  const navItems = [
+  const navItems: NavItem[] = [
     { name: "Home", icon: Home },
     { name: "Portfolio", icon: Work },
     { name: "Blog", icon: Article },

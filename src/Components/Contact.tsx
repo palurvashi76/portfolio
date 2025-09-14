@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   Box,
   Typography,
@@ -11,18 +10,32 @@ import {
   Alert,
 } from "@mui/material";
 import { Send, Email, LinkedIn, GitHub } from "@mui/icons-material";
+import { useState } from "react";
+import type { ChangeEvent, FormEvent } from "react";
+
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+interface FormErrors {
+  name?: string;
+  email?: string;
+  message?: string;
+}
 
 const Contact = () => {
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<FormData>({
     name: "",
     email: "",
     message: "",
   });
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<FormErrors>({});
   const [showSuccess, setShowSuccess] = useState(false);
 
-  const validateForm = () => {
-    const newErrors = {};
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
 
     if (!form.name.trim()) newErrors.name = "Name is required";
     if (!form.email.trim()) newErrors.email = "Email is required";
@@ -34,7 +47,7 @@ const Contact = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (validateForm()) {
       setShowSuccess(true);
@@ -43,10 +56,12 @@ const Contact = () => {
     }
   };
 
-  const handleChange = (field) => (e) => {
-    setForm((prev) => ({ ...prev, [field]: e.target.value }));
-    if (errors[field]) setErrors((prev) => ({ ...prev, [field]: undefined }));
-  };
+  const handleChange =
+    (field: keyof FormData) =>
+    (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      setForm((prev) => ({ ...prev, [field]: e.target.value }));
+      if (errors[field]) setErrors((prev) => ({ ...prev, [field]: undefined }));
+    };
 
   const contactInfo = [
     { icon: Email, label: "Email", value: "hello@myportfolio.com" },

@@ -9,12 +9,12 @@ import {
   useTheme,
 } from "@mui/material";
 import { Code, Favorite } from "@mui/icons-material";
-import img from "../assets/urvashi.jpeg";
+import urvashi from "../assets/urvashi.jpg";
 
-const Profile = () => {
+const Profile: React.FC = () => {
   const theme = useTheme();
 
-  const skills = [
+  const skills: string[] = [
     "React",
     "TypeScript",
     "Material-UI",
@@ -24,7 +24,7 @@ const Profile = () => {
     "Networking",
   ];
 
-  const interests = [
+  const interests: string[] = [
     "Full Stack Development",
     "UI/UX Design",
     "Database Systems",
@@ -57,7 +57,7 @@ const Profile = () => {
               mr: { md: 4 },
               border: "4px solid rgba(255,255,255,0.2)",
             }}
-            src={img}
+            src={urvashi}
             alt="Profile"
           />
           <Box>

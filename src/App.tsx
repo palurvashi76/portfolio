@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box, Container, Fab, Zoom, useTheme } from "@mui/material";
+import { Box, Container, Fab, Zoom } from "@mui/material";
 import { KeyboardArrowUp } from "@mui/icons-material";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
@@ -7,11 +7,14 @@ import Portfolio from "./Components/Portfolio";
 import Blog from "./Components/Blog";
 import Contact from "./Components/Contact";
 
-const ScrollToTop = () => {
-  const [showScrollTop, setShowScrollTop] = useState(false);
+// Define the page type
+type PageName = "Home" | "Portfolio" | "Blog" | "Contact";
+
+const ScrollToTop: React.FC = () => {
+  const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (): void => {
       setShowScrollTop(window.pageYOffset > 400);
     };
 
@@ -19,7 +22,7 @@ const ScrollToTop = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToTop = () => {
+  const scrollToTop = (): void => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -42,16 +45,27 @@ const ScrollToTop = () => {
   );
 };
 
-const AppContent = () => {
-  const [currentPage, setCurrentPage] = useState("Home");
-  const [darkMode, setDarkMode] = useState(false);
-  const theme = useTheme();
+const AppContent: React.FC = () => {
+  const [currentPage, setCurrentPage] = useState<PageName>("Home");
+  const [darkMode, setDarkMode] = useState<boolean>(false);
 
-  const toggleDarkMode = () => {
+  const toggleDarkMode = (): void => {
     setDarkMode(!darkMode);
   };
 
-  const renderPage = () => {
+  const handlePageChange = (page: string): void => {
+    // Type guard to ensure page is a valid PageName
+    if (
+      page === "Home" ||
+      page === "Portfolio" ||
+      page === "Blog" ||
+      page === "Contact"
+    ) {
+      setCurrentPage(page);
+    }
+  };
+
+  const renderPage = (): React.ReactElement => {
     switch (currentPage) {
       case "Home":
         return <Home />;
@@ -77,7 +91,7 @@ const AppContent = () => {
     >
       <Navbar
         currentPage={currentPage}
-        onPageChange={setCurrentPage}
+        onPageChange={handlePageChange}
         darkMode={darkMode}
         toggleDarkMode={toggleDarkMode}
       />
@@ -91,8 +105,8 @@ const AppContent = () => {
   );
 };
 
-function App() {
+const App: React.FC = () => {
   return <AppContent />;
-}
+};
 
 export default App;
