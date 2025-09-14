@@ -53,7 +53,7 @@ const projects = [
   },
   {
     id: "4",
-    title: "Mobile Fitness App",
+    title: "Mobile Fitneasas ss App",
     description:
       "Cross-platform mobile application for fitness tracking with workout plans and progress monitoring.",
     type: "Personal",
@@ -147,7 +147,7 @@ const Portfolio = () => {
             <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
               <FilterList sx={{ mr: 1.5, color: theme.palette.primary.main }} />
               <Typography variant="h6" fontWeight="bold">
-                Filterss
+                Filterssss
               </Typography>
             </Box>
 
