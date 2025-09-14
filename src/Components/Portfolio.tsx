@@ -147,7 +147,7 @@ const Portfolio = () => {
             <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
               <FilterList sx={{ mr: 1.5, color: theme.palette.primary.main }} />
               <Typography variant="h6" fontWeight="bold">
-                Filters
+                Filterss
               </Typography>
             </Box>
 
