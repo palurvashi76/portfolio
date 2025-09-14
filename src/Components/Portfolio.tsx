@@ -56,7 +56,9 @@ const projects: ProjectData[] = [
     type: "Course",
     domain: "DBMS",
     technologies: ["Python", "SQLite", "Tkinter"],
-    images: ["https://images.pexels.com/photos/590016/pexels-photo-590016.jpg"],
+    images: [
+      "https://s7280.pcdn.co/wp-content/uploads/2021/12/introduction-of-dbms.webp",
+    ],
     codeLink: "https://github.com/example/dbms",
   },
   {
@@ -68,7 +70,7 @@ const projects: ProjectData[] = [
     domain: "Networking",
     technologies: ["Python", "Wireshark", "Flask"],
     images: [
-      "https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbnTZMAzxN3odG6kiKRaMIYwIXg-cEsluUjw&s",
     ],
     codeLink: "https://github.com/example/network-monitor",
   },
@@ -81,7 +83,7 @@ const projects: ProjectData[] = [
     domain: "App",
     technologies: ["React Native", "Firebase", "Redux"],
     images: [
-      "https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcyn9Fh4p_MLxJU00Dlwm-7SwHY2EIADOVQA&s",
     ],
     codeLink: "https://github.com/example/fitness-app",
   },

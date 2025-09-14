@@ -64,9 +64,13 @@ const Contact = () => {
     };
 
   const contactInfo = [
-    { icon: Email, label: "Email", value: "hello@myportfolio.com" },
-    { icon: LinkedIn, label: "LinkedIn", value: "linkedin.com/in/myprofile" },
-    { icon: GitHub, label: "GitHub", value: "github.com/myusername" },
+    { icon: Email, label: "Email", value: "palurvashi76@gmail.com" },
+    {
+      icon: LinkedIn,
+      label: "LinkedIn",
+      value: "https://www.linkedin.com/in/urvashi-pal-6a56a7384/",
+    },
+    { icon: GitHub, label: "GitHub", value: "https://github.com/palurvashi76" },
   ];
 
   return (
