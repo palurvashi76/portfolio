@@ -87,6 +87,20 @@ const projects: ProjectData[] = [
     ],
     codeLink: "https://github.com/example/fitness-app",
   },
+  {
+  id: "5",
+  title: "My React App",
+  description: "A React project I built as part of my learning journey.",
+  type: "Personal",
+  domain: "Frontend",
+  technologies: ["React", "JavaScript", "CSS"],
+  images: [
+    "https://raw.githubusercontent.com/palurvashi76/MY-APP/main/screenshot.png"
+  ], // optional, you can use a hosted screenshot
+  codeLink: "https://github.com/palurvashi76/MY-APP",
+  projectLink: "https://my-app.vercel.app" // only if you deploy it on Vercel
+},
+
 ];
 
 // ----- Portfolio Component -----
