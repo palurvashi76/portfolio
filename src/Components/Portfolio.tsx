@@ -88,17 +88,16 @@ const projects: ProjectData[] = [
     codeLink: "https://github.com/example/fitness-app",
   },
   {
-  id: "5",
-  {
+  id: 0, // Or whatever unique number you want for this project
   title: 'FS Practical App',
   description: 'A comprehensive React application built for a course, demonstrating state management with Context & Redux, component lifecycles, and client-side routing with React Router.',
   image: '/images/fs-app.png',
   tags: ['React', 'Redux', 'React Router', 'CSS'],
-  source: 'YOUR_GITHUB_REPO_URL', // <-- PASTE THE GITHUB URL FOR YOUR FS-APP
-  visit: 'YOUR_NETLIFY_PROJECT_URL', // <-- PASTE THE LIVE NETLIFY URL FOR YOUR FS-APP
-  id: 0, // Make sure this id is unique
+  source: 'PASTE_YOUR_GITHUB_URL_HERE', // <-- https://github.com/palurvashi76/MY-APP
+  visit: 'PASTE_YOUR_NETLIFY_URL_HERE', // <-- PASTE THE LIVE NETLIFY LINK FOR YOUR FS-APP
+
 },
-},
+
 
 ];
 
