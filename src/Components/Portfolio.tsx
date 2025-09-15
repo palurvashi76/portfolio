@@ -93,8 +93,9 @@ const projects: ProjectData[] = [
   description: 'A comprehensive React application built for a course, demonstrating state management with Context & Redux, component lifecycles, and client-side routing with React Router.',
   image: '/images/fs-app.png',
   tags: ['React', 'Redux', 'React Router', 'CSS'],
-  source: 'PASTE_YOUR_GITHUB_URL_HERE', // <-- https://github.com/palurvashi76/MY-APP
-  visit: 'PASTE_YOUR_NETLIFY_URL_HERE', // <-- PASTE THE LIVE NETLIFY LINK FOR YOUR FS-APP
+  source: 'https://github.com/palurvashi76/MY-APP', // <-- https://github.com/palurvashi76/MY-APP
+  visit: 'https://eloquent-biscochitos-3119bd.netlify.app/
+E', // <-- https://eloquent-biscochitos-3119bd.netlify.app/
 
 },
 
