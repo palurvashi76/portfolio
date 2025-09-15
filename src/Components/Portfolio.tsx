@@ -89,16 +89,15 @@ const projects: ProjectData[] = [
   },
   {
   id: "5",
-  title: "My React App",
-  description: "A React project I built as part of my learning journey.",
-  type: "Personal",
-  domain: "Frontend",
-  technologies: ["React", "JavaScript", "CSS"],
-  images: [
-    "https://raw.githubusercontent.com/palurvashi76/MY-APP/main/screenshot.png"
-  ], // optional, you can use a hosted screenshot
-  codeLink: "https://github.com/palurvashi76/MY-APP",
-  projectLink: "https://my-app.vercel.app" // only if you deploy it on Vercel
+  {
+  title: 'FS Practical App',
+  description: 'A comprehensive React application built for a course, demonstrating state management with Context & Redux, component lifecycles, and client-side routing with React Router.',
+  image: '/images/fs-app.png',
+  tags: ['React', 'Redux', 'React Router', 'CSS'],
+  source: 'YOUR_GITHUB_REPO_URL', // <-- PASTE THE GITHUB URL FOR YOUR FS-APP
+  visit: 'YOUR_NETLIFY_PROJECT_URL', // <-- PASTE THE LIVE NETLIFY URL FOR YOUR FS-APP
+  id: 0, // Make sure this id is unique
+},
 },
 
 ];
