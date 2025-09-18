@@ -62,6 +62,9 @@ const Profile: React.FC = () => {
           />
           <Box>
             <Typography variant="h3" component="h1" gutterBottom>
+              Urvashi Pal
+            </Typography>
+            <Typography variant="h6" component="h1" gutterBottom>
               Welcome to My Portfolio
             </Typography>
             <Typography variant="h6" sx={{ opacity: 0.9, mb: 2 }}>

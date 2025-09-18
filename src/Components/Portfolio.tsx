@@ -88,18 +88,19 @@ const projects: ProjectData[] = [
     codeLink: "https://github.com/example/fitness-app",
   },
   {
-  id: 0, // Or whatever unique number you want for this project
-  title: 'FS Practical App',
-  description: 'A comprehensive React application built for a course, demonstrating state management with Context & Redux, component lifecycles, and client-side routing with React Router.',
-  image: '/images/fs-app.png',
-  tags: ['React', 'Redux', 'React Router', 'CSS'],
-  source: 'https://github.com/palurvashi76/MY-APP', // <-- https://github.com/palurvashi76/MY-APP
-  visit: 'https://eloquent-biscochitos-3119bd.netlify.app/
-E', // <-- https://eloquent-biscochitos-3119bd.netlify.app/
-
-},
-
-
+    id: "5",
+    title: "FS Practical App",
+    description:
+      "A comprehensive React application built for a course, demonstrating state management with Context & Redux, component lifecycles, and client-side routing with React Router.",
+    images: [
+      "https://www.ekreative.com/wp-content/uploads/2021/03/pankaj-patel-_SgRNwAVNKw-unsplash.jpg",
+    ],
+    technologies: ["React", "Redux", "React Router", "CSS"],
+    codeLink: "https://github.com/palurvashi76/MY-APP",
+    projectLink: "https://eloquent-biscochitos-3119bd.netlify.app/",
+    type: "Personal",
+    domain: "App",
+  },
 ];
 
 // ----- Portfolio Component -----
