@@ -87,20 +87,21 @@ const projects: ProjectData[] = [
     ],
     codeLink: "https://github.com/example/fitness-app",
   },
-  {
+
+   {
     id: "5",
-    title: "FS Practical App",
-    description:
-      "A comprehensive React application built for a course, demonstrating state management with Context & Redux, component lifecycles, and client-side routing with React Router.",
-    images: [
-      "https://www.ekreative.com/wp-content/uploads/2021/03/pankaj-patel-_SgRNwAVNKw-unsplash.jpg",
-    ],
-    technologies: ["React", "Redux", "React Router", "CSS"],
-    codeLink: "https://github.com/palurvashi76/MY-APP",
-    projectLink: "https://eloquent-biscochitos-3119bd.netlify.app/",
-    type: "Personal",
-    domain: "App",
+    title: "Shopping Cart App",
+    description: "React project demonstrating routing, cart, checkout, and chat widget.",
+    type: "Web App",
+    domain: "Learning",
+    technologies: ["React", "Redux", "React Router"],
+    images: ["/images/fs-app.png"], // optional screenshot
+    codeLink: "https://github.com/palurvashi76/MY-APP", // your shopping cart GitHub repo
+    projectLink: "https://my-6nb6e1ixy-palurvashi76s-projects.vercel.app/", // live deployed shopping cart
   },
+
+
+>>>>>>> f661ab1 (Updated Shopping Cart project and screenshot)
 ];
 
 // ----- Portfolio Component -----
