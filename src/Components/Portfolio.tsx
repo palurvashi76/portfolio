@@ -87,21 +87,19 @@ const projects: ProjectData[] = [
     ],
     codeLink: "https://github.com/example/fitness-app",
   },
-
-   {
+  {
     id: "5",
     title: "Shopping Cart App",
-    description: "React project demonstrating routing, cart, checkout, and chat widget.",
+    description:
+      "React project demonstrating routing, cart, checkout, and chat widget.",
     type: "Web App",
     domain: "Learning",
     technologies: ["React", "Redux", "React Router"],
-    images: ["/images/fs-app.png"], // optional screenshot
-    codeLink: "https://github.com/palurvashi76/MY-APP", // your shopping cart GitHub repo
-    projectLink: "https://my-6nb6e1ixy-palurvashi76s-projects.vercel.app/", // live deployed shopping cart
+    images: ["/images/fs-app.png"], // cleaned up screenshot path
+    codeLink: "https://github.com/palurvashi76/MY-APP",
+    projectLink:
+      "https://my-6nb6e1ixy-palurvashi76s-projects.vercel.app/",
   },
-
-
->>>>>>> f661ab1 (Updated Shopping Cart project and screenshot)
 ];
 
 // ----- Portfolio Component -----
@@ -359,8 +357,8 @@ const Portfolio: React.FC = () => {
                 No projects match your filters
               </Typography>
               <Typography sx={{ mb: 3, color: "text.secondary" }}>
-                Try adjusting your filter criteria or clearing all filters to
-                see more projects.
+                Try adjusting your filter criteria or clearing all filters to see
+                more projects.
               </Typography>
               <Chip
                 label="Clear All Filters"
