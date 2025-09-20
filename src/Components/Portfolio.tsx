@@ -97,8 +97,7 @@ const projects: ProjectData[] = [
     technologies: ["React", "Redux", "React Router"],
     images: ["/images/fs-app.png"], // cleaned up screenshot path
     codeLink: "https://github.com/palurvashi76/MY-APP",
-    projectLink:
-      "https://my-6nb6e1ixy-palurvashi76s-projects.vercel.app/",
+    projectLink: "https://my-app-cyan-ten-85.vercel.app/",
   },
 ];
 
@@ -357,8 +356,8 @@ const Portfolio: React.FC = () => {
                 No projects match your filters
               </Typography>
               <Typography sx={{ mb: 3, color: "text.secondary" }}>
-                Try adjusting your filter criteria or clearing all filters to see
-                more projects.
+                Try adjusting your filter criteria or clearing all filters to
+                see more projects.
               </Typography>
               <Chip
                 label="Clear All Filters"
